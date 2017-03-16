@@ -19,12 +19,12 @@
 </template>
 
 <script>
-// import auth from '../auth' // use [auth.js'] here
+import auth from './auth' // use [auth.js'] here
 
 export default {
     // default data store of the app
     data () {
-        // return { loggedIn: auth.loggedIn() }
+        return { loggedIn: auth.loggedIn() }
     }
 }
 </script>
@@ -33,6 +33,7 @@ export default {
 /* APP WIDE CSS */
 html {
   /*background: #6B4E81;*/
+  background: #DD682C;
 }
 
 #app {
@@ -43,6 +44,7 @@ html {
   color: #2c3e50;
   /*color: white;*/
   /*margin-top: 60px;*/
+  background: white;
 }
 
 h1, h2 {

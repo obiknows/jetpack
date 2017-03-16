@@ -11,7 +11,7 @@ article.classes
   .cf.pa2
     .bg-purple.fl.w-100.pa2
       //- a class
-      <router-link class="db link dim tc" href="#">
+      <router-link class="db link dim tc" to="#">
         img(class="w-100 db outline black-10" src="http://is4.mzstatic.com/image/thumb/Music62/v4/93/8f/75/938f7536-0188-f9ba-4585-0a77ceaebf0a/source/400x40000bb.png")
       </router-link>
       dl.mt2.f6.lh-copy
@@ -19,10 +19,6 @@ article.classes
         dt.m10.black.w-100.truncate {{ organization.desc }}
         dt.clip Cost
         dt.m10.gray.w-100.truncate Free
-
-
-
-
 
 
 </template>

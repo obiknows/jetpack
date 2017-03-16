@@ -23,24 +23,24 @@ export default {
         return {
             msg: 'Organizations',
             originalData: [
-                {name: 'Class 1', desc: 'this is what they do.', filter: 'new,popular,all-time'},
-                {name: 'Class 2', desc: 'this is what they do.', filter: 'popular'},
-                {name: 'Class 3', desc: 'this is what they do.', filter: 'popular,new'},
-                {name: 'Class 4', desc: 'this is what they do.', filter: 'popular,all-time'},
-                {name: 'Class 5', desc: 'this is what they do.', filter: 'all-time'},
-                {name: 'Class 6', desc: 'this is what they do.', filter: 'popular'},
-                {name: 'Class 7', desc: 'this is what they do.', filter: 'popular'},
-                {name: 'Class 8', desc: 'this is what they do.', filter: 'all-time'}
+                {name: 'class 1', desc: 'this is what they do.', filter: 'new,popular,all-time'},
+                {name: 'class 2', desc: 'this is what they do.', filter: 'popular'},
+                {name: 'class 3', desc: 'this is what they do.', filter: 'popular,new'},
+                {name: 'class 4', desc: 'this is what they do.', filter: 'popular,all-time'},
+                {name: 'class 5', desc: 'this is what they do.', filter: 'all-time'},
+                {name: 'class 6', desc: 'this is what they do.', filter: 'popular'},
+                {name: 'class 7', desc: 'this is what they do.', filter: 'popular'},
+                {name: 'class 8', desc: 'this is what they do.', filter: 'all-time'}
             ],
             organizations: [ // a temporary copy of the orig
                 {name: 'class 1', desc: 'this is what they do.', filter: 'popular,all-time'},
-                {name: 'Class 2', desc: 'this is what they do.', filter: 'popular'},
-                {name: 'Class 3', desc: 'this is what they do.', filter: ''},
-                {name: 'Class 4', desc: 'this is what they do.', filter: 'popular,all-time'},
-                {name: 'Class 5', desc: 'this is what they do.', filter: 'all-time'},
-                {name: 'Class 6', desc: 'this is what they do.', filter: 'popular'},
-                {name: 'Class 7', desc: 'this is what they do.', filter: 'popular'},
-                {name: 'Class 8', desc: 'this is what they do.', filter: 'all-time'}
+                {name: 'class 2', desc: 'this is what they do.', filter: 'popular'},
+                {name: 'class 3', desc: 'this is what they do.', filter: ''},
+                {name: 'class 4', desc: 'this is what they do.', filter: 'popular,all-time'},
+                {name: 'class 5', desc: 'this is what they do.', filter: 'all-time'},
+                {name: 'class 6', desc: 'this is what they do.', filter: 'popular'},
+                {name: 'class 7', desc: 'this is what they do.', filter: 'popular'},
+                {name: 'class 8', desc: 'this is what they do.', filter: 'all-time'}
             ]
         }
     },

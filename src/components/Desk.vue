@@ -4,11 +4,17 @@
 </template>
 
 <script>
+import auth from '../auth.js'
+
 export default {
     name: 'desk',
     data () {
         return {
         }
+    },
+
+    checkLogin () {
+        return console.log(auth.loggedIn())
     }
 }
 </script>
