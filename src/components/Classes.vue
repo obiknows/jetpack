@@ -1,6 +1,6 @@
 <template lang="pug">
 .home
-  nav.ph3.ph5-ns.pv4
+  nav.ph3.ph5-ns
     .nowrap.overflow-x-auto
       a.link.dim.mr3(@click="filter('new')") new
       a.link.dim.mr3(@click="filter('popular')") popular
