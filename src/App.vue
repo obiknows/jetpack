@@ -19,9 +19,12 @@
 </template>
 
 <script>
+// import auth from '../auth' // use [auth.js'] here
+
 export default {
-    name: 'app',
-    components: {
+    // default data store of the app
+    data () {
+        // return { loggedIn: auth.loggedIn() }
     }
 }
 </script>
