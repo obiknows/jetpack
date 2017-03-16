@@ -26,12 +26,13 @@ import School from './components/School'
 import Classes from './components/Classes'
 import Settings from './components/Settings'
 import '!style!css!tachyons/css/tachyons.css' // <- delete if you dont need
+// import PopupBlock from './components/support/Popup-Block'
 
 function checkAuth (to, from, next) {
     if (!auth.loggedIn()) { // go to auth & see if they say you're logged in
-        next({path: '/login', query: {redirect: to.fullPath}})
+        this.$router.push('/login')
     } else {
-        next()
+        next()  // do nothing...already authenticated
     }
 }
 
@@ -45,7 +46,7 @@ const routes = [
     {path: '/desk', component: Desk, beforeEnter: checkAuth},
     {path: '/classes', component: Classes},
     {path: '/settings', component: Settings},
-    {path: '/logout', beforeEnter (to, from, next) { auth.logout(); next('/') }},
+    {path: '/logout', beforeEnter (to, from, next) { auth.logout(); this.$router.go('/') }},
 
     // catch all other redirects
     { path: '*', redirect: '/' }
