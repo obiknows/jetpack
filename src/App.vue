@@ -1,11 +1,11 @@
 <template lang="pug">
 #app
-    h1 TogetherList
-    ul
-        li
-            router-link(to="/") /
-        li
-            router-link(to="/about") /about
+  h1 jetpack
+  ul
+    li
+      router-link(to="/") /
+    li
+      router-link(to="/about") /about
     router-view.view
 </template>
 

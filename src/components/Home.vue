@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import OrganizationBlock from './OrganizationBlock'
+import OrganizationBlock from './support/OrganizationBlock'
 
 export default {
     name: 'home',
@@ -23,7 +23,7 @@ export default {
         return {
             msg: 'Organizations',
             originalData: [
-                {name: 'Boys and Girls Club', desc: 'Here is what they do.', filter: 'lgbt,women_rights,immigration'},
+                {name: 'School 1', desc: 'Here is what they do.', filter: 'lgbt,women_rights,immigration'},
                 {name: 'Org 2', desc: 'Here is what they do.', filter: 'women_rights'},
                 {name: 'Org 3', desc: 'Here is what they do.', filter: ''},
                 {name: 'Org 4', desc: 'Here is what they do.', filter: 'lgbt,women_rights,immigration'},
@@ -33,7 +33,7 @@ export default {
                 {name: 'Org 8', desc: 'Here is what they do.', filter: 'immigration'}
             ],
             organizations: [
-                {name: 'Boys and Girls Club', desc: 'Here is what they do.', filter: 'lgbt,immigration'},
+                {name: 'School 1', desc: 'Here is what they do.', filter: 'lgbt,immigration'},
                 {name: 'Org 2', desc: 'Here is what they do.', filter: 'women_rights'},
                 {name: 'Org 3', desc: 'Here is what they do.', filter: ''},
                 {name: 'Org 4', desc: 'Here is what they do.', filter: 'lgbt,women_rights,immigration'},

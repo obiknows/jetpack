@@ -1,11 +1,11 @@
 <template lang="pug">
 .about
-  h1 "About page"
+  h1 TO BE BUILT...[the desk]
 </template>
 
 <script>
 export default {
-    name: 'about',
+    name: 'desk',
     data () {
         return {
         }
