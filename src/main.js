@@ -11,7 +11,7 @@ import App from './App'
 import VueRouter from 'vue-router' // <- delete if you dont need
 
 /*
-  [ ] APP PARTS/MODULES
+  [ ] APP PARTS/MODULES (pages of the app or parts of a page. its up to you.) [this is pages.]
 */
 import Home from './components/Home'
 import Desk from './components/Desk'

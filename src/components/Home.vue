@@ -2,9 +2,9 @@
 .home
   nav.ph3.ph5-ns.pv4
     .nowrap.overflow-x-auto
-      a.link.dim.gray.f5.f4-ns.dib.mr3(@click="filter('lgbt')") LGBT
-      a.link.dim.gray.f5.f4-ns.dib.mr3(@click="filter('women_rights')") WOMEN'S RIGHTS
-      a.link.dim.gray.f5.f4-ns.dib.mr3(@click="filter('immigration')") IMMIGRATION
+      a.link.dim.mr3(@click="filter('new')") new
+      a.link.dim.mr3(@click="filter('popular')") popular
+      a.link.dim.mr3(@click="filter('all-time')") all-time
       a.link.dim.gray.f5.f4-ns.dib.mr3(@click="reset()") clear
   ul
     li(v-for='organization in organizations')
@@ -23,24 +23,24 @@ export default {
         return {
             msg: 'Organizations',
             originalData: [
-                {name: 'School 1', desc: 'Here is what they do.', filter: 'lgbt,women_rights,immigration'},
-                {name: 'Org 2', desc: 'Here is what they do.', filter: 'women_rights'},
-                {name: 'Org 3', desc: 'Here is what they do.', filter: ''},
-                {name: 'Org 4', desc: 'Here is what they do.', filter: 'lgbt,women_rights,immigration'},
-                {name: 'Org 5', desc: 'Here is what they do.', filter: 'lgbt,immigration'},
-                {name: 'Org 6', desc: 'Here is what they do.', filter: 'lgbt,women_rights'},
-                {name: 'Org 7', desc: 'Here is what they do.', filter: 'women_rights'},
-                {name: 'Org 8', desc: 'Here is what they do.', filter: 'immigration'}
+                {name: 'Class 1', desc: 'this is what they do.', filter: 'new,popular,all-time'},
+                {name: 'Class 2', desc: 'this is what they do.', filter: 'popular'},
+                {name: 'Class 3', desc: 'this is what they do.', filter: 'popular,new'},
+                {name: 'Class 4', desc: 'this is what they do.', filter: 'popular,all-time'},
+                {name: 'Class 5', desc: 'this is what they do.', filter: 'all-time'},
+                {name: 'Class 6', desc: 'this is what they do.', filter: 'popular'},
+                {name: 'Class 7', desc: 'this is what they do.', filter: 'popular'},
+                {name: 'Class 8', desc: 'this is what they do.', filter: 'all-time'}
             ],
-            organizations: [
-                {name: 'School 1', desc: 'Here is what they do.', filter: 'lgbt,immigration'},
-                {name: 'Org 2', desc: 'Here is what they do.', filter: 'women_rights'},
-                {name: 'Org 3', desc: 'Here is what they do.', filter: ''},
-                {name: 'Org 4', desc: 'Here is what they do.', filter: 'lgbt,women_rights,immigration'},
-                {name: 'Org 5', desc: 'Here is what they do.', filter: 'lgbt,immigration,women_rights'},
-                {name: 'Org 6', desc: 'Here is what they do.', filter: 'lgbt,women_rights'},
-                {name: 'Org 7', desc: 'Here is what they do.', filter: 'women_rights'},
-                {name: 'Org 8', desc: 'Here is what they do.', filter: 'immigration,women_rights'}
+            organizations: [ // a temporary copy of the orig
+                {name: 'class 1', desc: 'this is what they do.', filter: 'popular,all-time'},
+                {name: 'Class 2', desc: 'this is what they do.', filter: 'popular'},
+                {name: 'Class 3', desc: 'this is what they do.', filter: ''},
+                {name: 'Class 4', desc: 'this is what they do.', filter: 'popular,all-time'},
+                {name: 'Class 5', desc: 'this is what they do.', filter: 'all-time'},
+                {name: 'Class 6', desc: 'this is what they do.', filter: 'popular'},
+                {name: 'Class 7', desc: 'this is what they do.', filter: 'popular'},
+                {name: 'Class 8', desc: 'this is what they do.', filter: 'all-time'}
             ]
         }
     },
@@ -68,10 +68,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
-  font-weight: normal;
-}
-
 ul {
   list-style-type: none;
   padding: 0;

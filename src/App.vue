@@ -1,6 +1,6 @@
 <template lang="pug">
 #app
-  h1 jetpack
+  header jetpack
   ul
     li
       router-link(to="/") /
@@ -18,6 +18,7 @@ export default {
 </script>
 
 <style>
+/* APP WIDE CSS */
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -25,5 +26,9 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+h1, h2 {
+  font-weight: normal;
 }
 </style>
