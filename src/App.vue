@@ -1,17 +1,15 @@
 <template lang="pug">
 //- create the app div
 #app
-  header
-    h1.f1.f-headline-ns.m.mb2.mb4-ns.ml4.center 🚀 jetpack
-    h2.f2.f-subheadline-ns.mb2.mb4-ns.center some subline
+  header.pa3.pa4-ns
+    a(class="link dim black b f1 f-headline-ns tc db mb3 mb4-ns ml4" href="/" title="Home") 🚀 jetpack
 
     //- then the navbar
     nav.bt.bb.tc.mw7.center.mt4
-      a(class="f6.f5-1.link.bg-animate.black-80.hover-bg-lightest-blue.dib.pa3.ph4-l" href="/") Home
-      a(class="f6.f5-1.link.bg-animate.black-80.hover-bg-lightest-blue.dib.pa3.ph4-l" href="/school") School
-      a(class="f6.f5-1.link.bg-animate.black-80.hover-bg-lightest-blue.dib.pa3.ph4-l" href="/desk") Desk
-      a(class="f6.f5-1.link.bg-animate.black-80.hover-bg-lightest-blue.dib.pa3.ph4-l" href="/classes") Classes
-      a(class="f6.f5-1.link.bg-animate.black-80.hover-bg-lightest-blue.dib.pa3.ph4-l" href="/settings") Settings
+      a(class="f4 f5-1 link b bg-animate black-80 hover-bg-lightest-blue dib pa3 ph4-l" href="/school") School
+      a(class="f4 f5-1 link b bg-animate black-80 hover-bg-lightest-blue dib pa3 ph4-l" href="/desk") Desk
+      a(class="f4 f5-1 link b bg-animate black-80 hover-bg-lightest-blue dib pa3 ph4-l" href="/classes") Classes
+      a(class="f4 f5-1 link b bg-animate black-80 hover-bg-lightest-blue dib pa3 ph4-l" href="/settings") Settings
 
 
   //- load the views
