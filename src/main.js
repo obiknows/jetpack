@@ -45,7 +45,10 @@ const routes = [
     {path: '/desk', component: Desk, beforeEnter: checkAuth},
     {path: '/classes', component: Classes},
     {path: '/settings', component: Settings},
-    {path: '/logout', beforeEnter (to, from, next) { auth.logout(); next() }}
+    {path: '/logout', beforeEnter (to, from, next) { auth.logout(); next('/') }},
+
+    // catch all other redirects
+    { path: '*', redirect: '/' }
 ]
 
 /*

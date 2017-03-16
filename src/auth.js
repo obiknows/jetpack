@@ -8,7 +8,7 @@
 // export a deafult 'AUTH' object with these general functions (can be swapped later)
 export default {
     /* LOGIN */
-    login (email, pass, cb) {
+    login (username, pass, cb) {
         // 0.
         cb = arguments[arguments.length - 1]
         if (localStorage.token) {
@@ -18,7 +18,7 @@ export default {
         }
 
         // 1.
-        pretendRequest(email, pass, (res) => {
+        pretendRequest(username, pass, (res) => {
             if (res.authenticated) {
                 localStorage.token = res.token
                 if (cb) cb(true)
@@ -52,9 +52,9 @@ export default {
 }
 
 // Helper Functions
-function pretendRequest (email, pass, cb) {
+function pretendRequest (username, pass, cb) {
     setTimeout(() => {
-        if (email === 'joe@example.com' && pass === 'password1') {
+        if (username === 'joe@example.com' && pass === 'password1') {
             cb({
                 authenticated: true,
                 token: Math.random().toString(36).substring(7)

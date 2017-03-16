@@ -9,10 +9,8 @@ import auth from '../auth.js'
 export default {
     name: 'desk',
     data () {
-        return {
-        }
+        return { }
     },
-
     checkLogin () {
         return console.log(auth.loggedIn())
     }
