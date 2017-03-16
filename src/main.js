@@ -16,7 +16,7 @@ import VueRouter from 'vue-router' // <- delete if you dont need
 import Home from './components/Home'
 import Desk from './components/Desk'
 import School from './components/School'
-import Class from './components/Class'
+import Classes from './components/Classes'
 import Settings from './components/Settings'
 import '!style!css!tachyons/css/tachyons.css' // <- delete if you dont need
 
@@ -30,7 +30,7 @@ const routes = [
     {path: '/', component: Home},
     {path: '/school', component: School},
     {path: '/desk', component: Desk},
-    {path: '/class', component: Class},
+    {path: '/classes', component: Classes},
     {path: '/settings', component: Settings}
 ]
 

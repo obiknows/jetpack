@@ -1,6 +1,6 @@
 <template lang="pug">
 .about
-  h1 TO BE BUILT...[the classroom]
+  h1 TO BE BUILT...[the school]
 </template>
 
 <script>
