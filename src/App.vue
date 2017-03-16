@@ -6,11 +6,11 @@
 
     //- then the navbar
     nav.bt.bb.tc.mw7.center.mt4
+      a(class="f4 f5-1 link b bg-animate black-80 hover-bg-lightest-blue dib pa3 ph4-l" href="/") Home
       a(class="f4 f5-1 link b bg-animate black-80 hover-bg-lightest-blue dib pa3 ph4-l" href="/school") School
       a(class="f4 f5-1 link b bg-animate black-80 hover-bg-lightest-blue dib pa3 ph4-l" href="/desk") Desk
       a(class="f4 f5-1 link b bg-animate black-80 hover-bg-lightest-blue dib pa3 ph4-l" href="/classes") Classes
       a(class="f4 f5-1 link b bg-animate black-80 hover-bg-lightest-blue dib pa3 ph4-l" href="/settings") Settings
-
 
   //- load the views
   router-view.view
