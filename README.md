@@ -6,6 +6,11 @@ jetpack
 adapated from [this gist](https://gist.github.com/levibostian/96cc285d4235d73f09cdc22f2590ccba)
 and this [repo](https://github.com/TogetherList/TogetherList-Site).
 
+## Pre Advision
+
+before you get started, I **strongly urge you download VSCode**. It will make this easier. I promise
+
+
 ## Build Setup
 
 ``` bash

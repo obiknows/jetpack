@@ -1,6 +1,7 @@
 <template lang="pug">
 //- create the app div
 #app
+  //- create the header
   header.pa3.pa4-ns
     a(class="link dim black b f1 f-headline-ns tc db mb3 mb4-ns ml4" href="/" title="Home") 🚀 jetpack
 

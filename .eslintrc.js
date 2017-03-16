@@ -19,7 +19,9 @@ module.exports = {
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
     // eslint for vue files wants indent of 2 spaces. I want 4!
-    'indent': ["error", 4]
+    'indent': ["error", 4],
+    // uneven spacing in json
+    // 'object-curly-spacing': 1,
   },
   "env": { // by default, localStorage is not defined. Specify environments and it allows it.
     "browser": true,
