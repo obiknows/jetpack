@@ -1,66 +1,42 @@
+<!-- HOME.VUE -->
+<!--
+  [] root directory for user (in app)
+-->
 <template lang="pug">
+//- create the app div
+#crap
+  //- create the header
+  header.pa4.pa4-ns
+    router-link(class="dim black b f1 f-headline-ns tc mb3 mb4-ns ml4 outline-0 no-underline" to="/" title="Home") 🚀 jetpack
 
-<main class="w-100 cf helvetica dark-gray bg-white pa3 pa4-m pa5-l mw9 center">
-    <div class="fl w-50 pr2 pr3-l mb3 mb4-l">
-      <div class="cover pv5 pv6-m pv7-l" style="background:black url(http://mrmrs.io/photos/v/022.jpg) center;"></div>
-    </div>
-    <div class="fl w-50 w-25-l pl2 pr2-m ph2-l mb3 mb4-l">
-      <div class="cover pv5 pv6-m pv7-l" style="background:black url(http://mrmrs.io/photos/v/024.jpg) center;"> </div>
-    </div>
-    <div class="fl w-50 w-50 w-25-l pr2 pr0-l pl3-l mb3 mb4-l">
-        <div class="cover pv5 pv6-m pv7-l" style="background:black url(http://mrmrs.io/photos/050.jpg) left;"> </div>
-    </div>
-    <div class="fl w-50 w-50 w-25-l pl2 pl0-l pr2-m pr4-l mb3 mb4-l">
-      <div class="cover pv5 pv6-m pv7-l" style="background:black url(http://mrmrs.io/photos/049.jpg) center;"> </div>
-    </div>
-    <div class="fl w-100 w-50-l pr2-l pl2-ns mb4 mb0-l mb4 outline">
-      <div class="pa4">
-        <h1 class="f4 f2-l fw7 mt0 pv3-l bb-l bb--black">#004</h1>
-        <p class="lh-copy mt2 mt3-m mt5-l f6">
-          <span class="db-ns f6 fw7 lh-solid mb3 mb0-m mb4-l">Mies, my great mentor said:</span>
-          <span class="fw9 f6 f1-l db lh-title mb3 mb4-l">“jetpack is really lit.”</span>
-          <span class="db-l measure-wide">
-          That is the essence of syntax: the discipline
-          that controls the proper use of grammar in the construction of phrases and the articulation of a language, Design. The syntax of design is provided by many components in the nature of the project.
-        </span>
-        </p>
-      </div>
-    </div>
-    <div class="cf">
-      <div class="fl w-100 w-25-l pl3-l mb3 mb4-l">
-          <div class="cover pv5 pv6-m pv7-l" style="background:black url(http://mrmrs.io/photos/051.jpg) center;"> </div>
-      </div>
-      <div class="fl w-100 w-25-l pr3-l">
-        <p class="lh-copy measure f6 pt3 pt0-l mt0 mb3 mb4-l center">
-          <span class="fw6">For us Graphic Design is “organization of information.”</span> There are other ways.
-        </p>
-      </div>
+    //- then the navbar (feel free to use HTML || 'pug' [template language])
+    nav.bt.bb.tc.mw7.center.mt4
+      router-link(class="f4 f5-1 link b bg-animate black-80 hover-bg-light-red dib pa3 ph4-l" to="/") Home
+      router-link(class="f4 f5-1 link b bg-animate black-80 hover-bg-light-yellow dib pa3 ph4-l" to="/school") School
+      router-link(class="f4 f5-1 link b bg-animate black-80 hover-bg-light-green dib pa3 ph4-l" to="/desk") Desk
+      router-link(class="f4 f5-1 link b bg-animate black-80 hover-bg-light-blue dib pa3 ph4-l" to="/classes") Classes
+      router-link(class="f4 f5-1 link b bg-animate black-80 hover-bg-light-pink dib pa3 ph4-l" to="/settings") Settings
+      //- {if signed in...}
+      a(v-if="loggedIn" class="f4 f5-1 link b bg-animate black-80 hover-bg-light-purple dib pa3 ph4-l" href="/logout") Log out
 
-      <div class="fl w-100 w-75-l pv0 mv0">
-        <div class="fl w-100 mb2 mb4-l">
-          <div class="cover pv5 pv6-l" style="background:black url(http://mrmrs.io/photos/u/001.jpg) center;"> </div>
-        </div>
-        <div class="fl w-25 mb2 mb4-l">
-          <div class="cover pv5 pv6-m pv7-l" style="background:black url(http://mrmrs.io/photos/u/002.jpg) center;"> </div>
-        </div>
-        <div class="fl w-75 pl2 pl4-l mb2 mb4-l">
-          <div class="cover pv5 pv6-m pv7-l" style="background:black url(http://mrmrs.io/photos/u/003.jpg) center;"> </div>
-        </div>
-        <div class="fl w-100 mb2 mb4-l">
-            <div class="cover pv5 pv6-ns" style="background:black url(http://mrmrs.io/photos/u/004.jpg) center;"> </div>
-        </div>
-      </div>
-    </div>
-</main>
-
+  //- load the views
+  router-view.view
 </template>
 
 <script>
+import auth from '../auth' // use [auth.js'] here
+
 export default {
+    // default data store of the app
     name: 'home',
     data () {
-        return {
-        }
+        console.log('in the data() method of the `HOME.VUE`')
+        console.log('auth says: ', auth.loggedIn())
+        return { loggedIn: auth.loggedIn() }
+    },
+    //  on creation,
+    onCreate () {
+        auth.onChange = loggedIn => { this.loggedIn = loggedIn }
     }
 }
 </script>

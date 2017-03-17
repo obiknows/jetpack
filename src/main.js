@@ -29,8 +29,8 @@ import '!style!css!tachyons/css/tachyons.css' // <- delete if you dont need
 // import PopupBlock from './components/support/Popup-Block'
 
 function checkAuth (to, from, next) {
-    if (!auth.loggedIn()) { // go to auth & see if they say you're logged in
-        this.$router.push('/login')
+    if (!auth.loggedIn()) { // go to auth module & see if you're logged in
+        next('/login')
     } else {
         next()  // do nothing...already authenticated
     }
@@ -40,13 +40,17 @@ function checkAuth (to, from, next) {
   [ ] APP ROUTES
 */
 const routes = [
-    {path: '/', component: Home},
-    {path: '/login', component: Login},
-    {path: '/school', component: School},
-    {path: '/desk', component: Desk, beforeEnter: checkAuth},
-    {path: '/classes', component: Classes},
-    {path: '/settings', component: Settings},
-    {path: '/logout', beforeEnter (to, from, next) { auth.logout(); this.$router.go('/') }},
+    {path: '/',
+        component: Home,
+        children: [
+          {path: '/school', component: School},
+          {path: '/desk', component: Desk, beforeEnter: checkAuth},
+          {path: '/classes', component: Classes},
+          {path: '/settings', component: Settings},
+          {path: '/login', component: Login},
+          {path: '/logout', beforeEnter (to, from, next) { auth.logout(); this.$router.go('/') }}
+        ]
+    },
 
     // catch all other redirects
     { path: '*', redirect: '/' }
