@@ -48,7 +48,12 @@ const routes = [
           {path: '/classes', component: Classes},
           {path: '/settings', component: Settings},
           {path: '/login', component: Login},
-          {path: '/logout', beforeEnter (to, from, next) { auth.logout(); this.$router.go('/') }}
+            {path: '/logout',
+                beforeEnter (to, from, next) {
+                    auth.logout()
+                    next('/')
+                }
+            }
         ]
     },
 

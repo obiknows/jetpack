@@ -67,6 +67,7 @@ export default {
                 if (!loggedIn) {
                     this.error = true
                 } else {
+                    // on next frame, redirect
                     this.$nextTick(function () {
                         this.$router.replace(this.$route.query.redirect || '/')
                         location.reload()
