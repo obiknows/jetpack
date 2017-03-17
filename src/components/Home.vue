@@ -18,7 +18,7 @@
         <h1 class="f4 f2-l fw7 mt0 pv3-l bb-l bb--black">#004</h1>
         <p class="lh-copy mt2 mt3-m mt5-l f6">
           <span class="db-ns f6 fw7 lh-solid mb3 mb0-m mb4-l">Mies, my great mentor said:</span>
-          <span class="fw9 f6 f1-l db lh-title mb3 mb4-l">“God is in the details.”</span>
+          <span class="fw9 f6 f1-l db lh-title mb3 mb4-l">“jetpack is really lit.”</span>
           <span class="db-l measure-wide">
           That is the essence of syntax: the discipline
           that controls the proper use of grammar in the construction of phrases and the articulation of a language, Design. The syntax of design is provided by many components in the nature of the project.
