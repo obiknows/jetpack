@@ -1,0 +1,97 @@
+{
+  "name": "samnnodim/jetpack",
+  "version": "0.1.4",
+  "libraries": {
+    "xv": "^1.1.25"
+  },
+  "title": "",
+  "branch": "",
+  "style": {
+    "name": "Future",
+    "componentSet": {
+      "nav": "nav/BasicNav",
+      "header": "header/BannerHeader",
+      "article": "article/BasicArticle",
+      "footer": "footer/BasicFooter"
+    },
+    "fontFamily": "\"Avenir Next\", Helvetica, sans-serif",
+    "heading": {
+      "fontWeight": 500,
+      "textTransform": "uppercase",
+      "letterSpacing": "0.2em"
+    },
+    "alternativeText": {
+      "textTransform": "uppercase",
+      "fontWeight": 400,
+      "letterSpacing": "0.2em",
+      "opacity": 0.75
+    },
+    "colors": {
+      "text": "#333",
+      "background": "#fff",
+      "primary": "#666",
+      "secondary": "#888",
+      "highlight": "#1f80ff",
+      "muted": "#f6f6f6",
+      "border": "#eee"
+    },
+    "layout": {
+      "centered": true,
+      "maxWidth": 1024,
+      "bannerHeight": "80vh"
+    }
+  },
+  "content": [
+    {
+      "component": "nav",
+      "links": [
+        {
+          "href": "https://github.com/samnnodim/jetpack",
+          "text": "GitHub"
+        },
+        {
+          "href": "https://npmjs.com/package/jetpack-app",
+          "text": "npm"
+        }
+      ]
+    },
+    {
+      "component": "header",
+      "heading": "jetpack",
+      "subhead": "🚀",
+      "children": [
+        {
+          "component": "ui/TweetButton",
+          "text": "jetpack: 🚀",
+          "url": null
+        },
+        {
+          "component": "ui/GithubButton",
+          "user": "samnnodim",
+          "repo": "jetpack"
+        }
+      ],
+      "text": "v1.0.0"
+    },
+    {
+      "component": "article",
+      "metadata": {
+        "source": "github.readme"
+      },
+      "html": "\n<blockquote>\n<p>A simple frontend for whatever you need. takeoff with jetpack &#x1F680;</p>\n</blockquote>\n<p>adapated from <a href=\"https://gist.github.com/levibostian/96cc285d4235d73f09cdc22f2590ccba\">this gist</a>\nand this <a href=\"https://github.com/TogetherList/TogetherList-Site\">repo</a>.</p>\n<h2>Pre Advision</h2>\n<p>before you get started, I <strong>strongly urge you download VSCode</strong>. It will make this easier. I promise</p>\n<h2>Build Setup</h2>\n<pre><span class=\"hljs-comment\"># install dependencies</span>\nnpm install\n\n<span class=\"hljs-comment\"># serve with hot reload at localhost:8080</span>\nnpm run dev\n\n<span class=\"hljs-comment\"># build for production with minification</span>\nnpm run build\n\n<span class=\"hljs-comment\"># run unit tests</span>\nnpm run unit\n\n<span class=\"hljs-comment\"># run e2e tests</span>\nnpm run e2e\n\n<span class=\"hljs-comment\"># run all tests</span>\nnpm <span class=\"hljs-built_in\">test</span></pre><h3>Further Research</h3>\n<p>For detailed explanation on how things work, checkout the <a href=\"http://vuejs-templates.github.io/webpack/\">guide</a> and <a href=\"http://vuejs.github.io/vue-loader\">docs for vue-loader</a>.</p>\n"
+    },
+    {
+      "component": "footer",
+      "links": [
+        {
+          "href": "https://github.com/samnnodim/jetpack",
+          "text": "GitHub"
+        },
+        {
+          "href": "https://github.com/samnnodim",
+          "text": "samnnodim"
+        }
+      ]
+    }
+  ]
+}
